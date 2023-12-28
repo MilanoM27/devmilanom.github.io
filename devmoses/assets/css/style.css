@@ -4,6 +4,26 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #272829;
+  /* width */
+
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #4c078d; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }
 
 a {
@@ -225,7 +245,30 @@ h6 {
   height: 100vh;
   background: url("../img/hero-bg.jpg") top center;
   background-size: cover;
+  background-image: url('/devmoses/assets/img/20231226_191431.jpg');
+  background-size:cover;
+        -webkit-animation: slidein 100s;
+        animation: slidein 100s;
+
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate;              
 }
+
+@-webkit-keyframes slidein {
+from {background-position: top; background-size:3000px; }
+to {background-position: -100px 0px;background-size:2750px;}
+}
+@keyframes slidein {
+  from {background-position: top;background-size:3000px; }
+  to {background-position: -100px 0px;background-size:2750px;}
+  
+  }
 
 #hero:before {
   content: "";
@@ -242,6 +285,8 @@ h6 {
   position: relative;
   z-index: 2;
   min-width: 300px;
+  align-items: center;
+  justify-content: center;
 }
 
 #hero h1 {
@@ -333,6 +378,8 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+
+
 .about .content h3 {
   font-weight: 700;
   font-size: 26px;
@@ -988,6 +1035,7 @@ section {
   font-size: 13px;
   color: #eaebf0;
 }
+
 
 @media (max-width: 1199px) {
   #footer {
